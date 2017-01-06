@@ -8,3 +8,12 @@ checkout:
   post:
     - bundle install
     - bash automated_build.sh
+deployment:
+  development:
+    branch: develop
+    commands:
+      - ./deploy_develop.sh
+  production:
+    branch: master
+    commands:
+      - ./deploy_production.sh
